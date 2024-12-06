@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 
-/**
- * Custom hook to fetch data from Google Sheets API
- * @param {string} tabName - The name of the sheet/tab.
- * @param {string} range - The range within the tab to fetch.
- * @returns {Array} - An array containing the fetched data and any error state.
- */
+
 const useGoogleSheetData = (tabName, range) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);

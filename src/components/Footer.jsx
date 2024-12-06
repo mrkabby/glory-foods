@@ -1,14 +1,14 @@
 import React from "react";
-import useGoogleSheetData from "../components/Usehooks"; // Ensure this path is correct
+import useGoogleSheetData from "../components/Usehooks"; 
 
 const Footer = () => {
-  const [footerData, error] = useGoogleSheetData("Footer", "A:B"); // Fetch columns A and B
+  const [footerData, error] = useGoogleSheetData("Footer", "A:B"); 
 
   if (error) {
     return <p className="text-red-500 text-center">Failed to load footer data: {error}</p>;
   }
 
-  // Convert fetched data into an object for easy access
+  
   const footerContent = footerData.reduce((acc, [key, value]) => {
     acc[key] = value;
     return acc;
@@ -17,10 +17,10 @@ const Footer = () => {
   return (
     <footer className="bg-green-600 text-white py-6">
       <div className="container mx-auto text-center">
-        {/* Footer Text */}
+       
         <p className="mb-4">{footerContent.Text || "© 2024 Glory Foods. All Rights Reserved."}</p>
 
-        {/* Social Media Icons */}
+        
         <div className="flex justify-center space-x-6">
           {footerContent.Facebook && (
             <a

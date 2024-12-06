@@ -33,10 +33,9 @@ const Hero = () => {
         backgroundImage: `url(${content.image})`,
       }}
     >
-      {/* Overlay for opacity */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content */}
+      
       <div className="relative z-10 text-center px-4 md:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
           {content.title}

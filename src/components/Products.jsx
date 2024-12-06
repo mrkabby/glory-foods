@@ -3,7 +3,7 @@ import useGoogleSheetData from "../components/Usehooks";
 
 const Products = () => {
   const tabName = "Products";
-  const range = "A2:C4"; // Adjust range to cover all products
+  const range = "A2:C4";
   const [data, error] = useGoogleSheetData(tabName, range);
 
   const defaultProducts = [

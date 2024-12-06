@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <header className="fixed w-full bg-green-600 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
-        {/* Logo */}
+        
         <h1 className="text-2xl font-bold text-white">Glory Foods</h1>
 
-        {/* Hamburger Menu for Mobile */}
+        
         <button
           className="text-white md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -31,7 +31,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Navigation Links */}
+        
         <nav
           className={`${
             isMenuOpen ? 'block' : 'hidden'
@@ -40,7 +40,7 @@ const Navbar = () => {
           <a
             href="#home"
             className="block text-white hover:text-yellow-300 transition cursor-pointer px-4 md:px-0"
-            onClick={() => setIsMenuOpen(false)} // Close menu on link click
+            onClick={() => setIsMenuOpen(false)} 
           >
             Home
           </a>
