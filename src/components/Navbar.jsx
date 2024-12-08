@@ -8,8 +8,16 @@ const Navbar = () => {
     <header className="fixed w-full bg-green-600 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-white">Glory Foods</h1>
-
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className="text-2xl font-bold text-white cursor-pointer"
+          onClick={() => setIsMenuOpen(false)} // Close menu if open
+        >
+          Glory Foods
+        </Link>
+        
         {/* Hamburger Menu for Mobile */}
         <button
           className="text-white md:hidden"
