@@ -1,5 +1,6 @@
 import React from "react";
 import useGoogleSheetData from "../components/Usehooks";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const tabName = "Hero";
@@ -43,10 +44,15 @@ const Hero = () => {
         <p className="text-base sm:text-lg md:text-xl mb-6 max-w-lg mx-auto">
           {content.description}
         </p>
-        <button className="bg-green-500 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-green-700 transition duration-300">
+        <Link
+          to="about" 
+          smooth={true}
+          duration={500}
+          className="bg-green-500 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-green-700 transition duration-300 cursor-pointer"
+        >
           Learn More
-        </button>
-      </div>
+        </Link>
+        </div>
     </section>
   );
 };
